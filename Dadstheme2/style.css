@@ -1,0 +1,93 @@
+/*
+ Theme Name:   Teddies Galore and Friends
+ Theme URI:    http://github.com/blacksnotling/
+ Description:  A child theme for Storefront - side bar on the hompage
+ Author:       Andy M
+ Author URI:   http://github.com/blacksnotling/
+ Template:     storefront
+ Version:      20170709
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, left-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  tgaf
+*/
+@media screen and (min-width: 768px) {
+  .page-template-template-homepage-php .content-area {
+    width:73.9130434783%;
+    float:right;
+    margin-right:0;
+  }
+}
+
+/* Logo size for mobile site */
+@media screen and (max-width: 768px) {
+  .site-header .site-branding img {
+    max-height: none !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
+
+/* Logo size for desktop site */
+@media screen and (min-width: 768px) {
+  .site-header .site-branding img, .site-header .site-logo-anchor img, .site-header .site-logo-link img {
+    height: auto;
+    max-height: none;
+    max-width: none;
+    width: 340px !important;
+  }
+}
+
+/* Hide the wisget area containing the main nav menu (below the footer) on mobile sites */
+@media screen and (max-width: 768px) {
+  .header-widget-tgaf .widget_nav_menu {
+    display: none;
+  }
+}
+
+.site-header-cart .cart-contents:after,
+.storefront-handheld-footer-bar ul li.cart > a:before {
+content: "\f07a";
+}
+
+/* Nav menu on desktop sites */
+@media screen and (min-width: 768px) {
+  .header-widget-tgaf .widget_nav_menu {
+    display:block;
+  }
+  .header-widget-tgaf ul.menu, .header-widget-tgaf ul.nav-menu{
+    max-height:none;
+    overflow:visible;
+  }
+  .header-widget-tgaf ul.menu>li>a, .header-widget-tgaf ul.nav-menu>li>a{
+    padding:1em;
+  }
+  .header-widget-tgaf ul.menu>li:first-child, .header-widget-tgaf ul.nav-menu>li:first-child{
+    margin-left:-1em;
+  }
+   ul.menu>li.menu-item-has-children:hover:after,.header-widget-tgaf ul.menu>li.page_item_has_children:hover:after,.header-widget-tgaf ul.nav-menu>li.menu-item-has-children:hover:after,.header-widget-tgaf ul.nav-menu>li.page_item_has_children:hover:after{display:block}
+  .header-widget-tgaf ul.menu ul,.header-widget-tgaf ul.nav-menu ul{margin-left:0}
+  .header-widget-tgaf ul.menu ul li a,.header-widget-tgaf ul.nav-menu ul li a{padding:.875em 1.41575em;font-weight:400;font-size:.875em}
+  .header-widget-tgaf ul.menu ul li:last-child,.header-widget-tgaf ul.nav-menu ul li:last-child{border-bottom:0}
+  .header-widget-tgaf ul.menu ul ul,.header-widget-tgaf ul.nav-menu ul ul{margin-left:0;box-shadow:none}
+  .header-widget-tgaf ul.menu ul a:hover,.header-widget-tgaf ul.menu ul li:hover>a,.header-widget-tgaf ul.nav-menu ul a:hover,.header-widget-tgaf ul.nav-menu ul li:hover>a{background-color:rgba(0,0,0,.025)}
+  .header-widget-tgaf a{padding:0 1em 2.2906835em}
+
+  .header-widget-tgaf{clear:both;display:block;width:100%}
+  .header-widget-tgaf ul{list-style:none;margin:0;padding-left:0;display:block}
+  .header-widget-tgaf ul li{position:relative;display:inline-block;text-align:left}
+  .header-widget-tgaf ul li a{display:block}
+  .header-widget-tgaf ul li a:before,.secondary-navigation ul li a:before{display:none}
+  .header-widget-tgaf ul li.focus>ul,.header-widget-tgaf ul li:hover>ul,.secondary-navigation ul li.focus>ul,.secondary-navigation ul li:hover>ul{left:0;display:block}
+  .header-widget-tgaf ul li.focus>ul li>ul,.header-widget-tgaf ul li:hover>ul li>ul,.secondary-navigation ul li.focus>ul li>ul,.secondary-navigation ul li:hover>ul li>ul{left:-9999px}
+  .header-widget-tgaf ul li.focus>ul li>ul.sub-menu--is-touch-device,.header-widget-tgaf ul li:hover>ul li>ul.sub-menu--is-touch-device,.secondary-navigation ul li.focus>ul li>ul.sub-menu--is-touch-device,.secondary-navigation ul li:hover>ul li>ul.sub-menu--is-touch-device{display:none;left:0}
+  .header-widget-tgaf ul li.focus>ul li.focus>ul,.header-widget-tgaf ul li.focus>ul li:hover>ul,.header-widget-tgaf ul li:hover>ul li.focus>ul,.header-widget-tgaf ul li:hover>ul li:hover>ul,.secondary-navigation ul li.focus>ul li.focus>ul,.secondary-navigation ul li.focus>ul li:hover>ul,.secondary-navigation ul li:hover>ul li.focus>ul,.secondary-navigation ul li:hover>ul li:hover>ul{left:100%;top:0;display:block}
+  .header-widget-tgaf ul ul,.secondary-navigation ul ul{float:left;position:absolute;top:100%;z-index:99999;left:-9999px}
+  .header-widget-tgaf ul ul.sub-menu--is-touch-device,.secondary-navigation ul ul.sub-menu--is-touch-device{display:none;left:0}
+  .header-widget-tgaf ul ul li,.secondary-navigation ul ul li{display:block}
+  .header-widget-tgaf ul ul li a,.secondary-navigation ul ul li a{width:200px}
+  .widget_nav_menu ul li:before {
+    content: "";
+  }
+
+}
