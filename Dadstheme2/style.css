@@ -11,6 +11,13 @@
  Tags:         light, dark, two-columns, left-sidebar, responsive-layout, accessibility-ready
  Text Domain:  tgaf
 */
+
+/* replaces the basket Icon with a little trolley */
+.site-header-cart .cart-contents:after,
+.storefront-handheld-footer-bar ul li.cart > a:before {
+  content: "\f07a";
+}
+
 @media screen and (min-width: 768px) {
   .page-template-template-homepage-php .content-area {
     width:73.9130434783%;
@@ -45,10 +52,6 @@
   }
 }
 
-.site-header-cart .cart-contents:after,
-.storefront-handheld-footer-bar ul li.cart > a:before {
-content: "\f07a";
-}
 
 /* Nav menu on desktop sites */
 @media screen and (min-width: 768px) {
