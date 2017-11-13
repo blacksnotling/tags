@@ -26,13 +26,14 @@
 
  }
 
-
+/**
+  * Removes the Woocommerce and Wordpress credit
+  */
 add_action( 'init', 'tgaf_custom_remove_footer_credit', 10 );
 
-//Removes the Woocommerce and Wordpress credit
 function tgaf_custom_remove_footer_credit () {
-    remove_action( 'storefront_footer', 'storefront_credit', 20 );
-    add_action( 'storefront_footer', 'tgaf_custom_storefront_credit', 20 );
+  remove_action( 'storefront_footer', 'storefront_credit', 20 );
+  add_action( 'storefront_footer', 'tgaf_custom_storefront_credit', 20 );
 }
 
 function tgaf_custom_storefront_credit() {
@@ -44,7 +45,9 @@ function tgaf_custom_storefront_credit() {
 }
 
 
-//Modified header widget area to hide the display when it is in handheld-navigation mode
+/**
+  * Modified header widget area to hide the display when it is in handheld-navigation mode
+  */
 if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	/**
 	 * Display header widget region
@@ -66,8 +69,11 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	}
 }
 
-//Remove the search bar from the header
+/**
+  * Remove the search bar from the header
+  */
 add_action( 'init', 'jk_remove_storefront_header_search' );
+
 function jk_remove_storefront_header_search() {
-remove_action( 'storefront_header', 'storefront_product_search', 	40 );
+  remove_action( 'storefront_header', 'storefront_product_search', 	40 );
 }
