@@ -72,8 +72,25 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 /**
   * Remove the search bar from the header
   */
-add_action( 'init', 'jk_remove_storefront_header_search' );
+add_action( 'init', 'tgaf_remove_storefront_header_search' );
 
-function jk_remove_storefront_header_search() {
+function tgaf_remove_storefront_header_search() {
   remove_action( 'storefront_header', 'storefront_product_search', 	40 );
 }
+
+/**
+ * Alters the output of the homepage product categories on the Storefront theme
+ * Affects the storefront_product_categories_args filter in /inc/structure/template-tags.php
+ * Thanks to https://gist.github.com/stuartduff/95e7c786b59aafc0d6b5
+ */
+
+function tgaf_display_all_home_product_categories( $args ) {
+
+	// Sets the maximum product categories to 50, you can increase this to display more if need be.
+	$args['limit'] = 50;
+
+	// Output
+	return $args;
+
+}
+add_filter( 'storefront_product_categories_args', 'tgaf_display_all_home_product_categories' );
