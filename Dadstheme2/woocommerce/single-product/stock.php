@@ -23,6 +23,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <ul>
 	<li>Shipping 1-2 days</li>
-	<li>Postage £3.50</li>
 </uL>
 <p class="stock <?php echo esc_attr( $class ); ?>"><?php echo wp_kses_post( $availability ); ?></p>
